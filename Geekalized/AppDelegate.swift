@@ -13,11 +13,33 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var isNoInternetConnectionViewVisible:Bool = false
+
+    fileprivate lazy var reachability: NetReachability = NetReachability(hostname: "www.google.com")
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        initNetworkStatus()
         return true
+    }
+    
+    @objc func networkStatusChanged() {
+        if (reachability.currentReachabilityStatus == .notReachable && isNoInternetConnectionViewVisible == false) {
+            print("no internet connection")
+        } else if (reachability.currentReachabilityStatus != .notReachable && isNoInternetConnectionViewVisible == true) {
+            print("Connected with Internet")
+        }
+    }
+
+    func initNetworkStatus() {
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.networkStatusChanged), name: NSNotification.Name(rawValue: FFReachabilityChangedNotification), object: nil)
+        reachability.startNotifier()
+        
+        print("Reachability: \(reachability.currentReachabilityStatus)")
+        
+        //networkStatusChanged()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

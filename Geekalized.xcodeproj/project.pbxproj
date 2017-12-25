@@ -18,6 +18,10 @@
 		2662BDFD1FF057530024A899 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662BDFC1FF057530024A899 /* Extensions.swift */; };
 		2662BDFF1FF0575C0024A899 /* iPhoneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662BDFE1FF0575C0024A899 /* iPhoneType.swift */; };
 		2662BE011FF057620024A899 /* nextResponderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662BE001FF057620024A899 /* nextResponderTextField.swift */; };
+		2662BE041FF14F120024A899 /* ViewControllerFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662BE031FF14F120024A899 /* ViewControllerFeed.swift */; };
+		2662BE071FF155000024A899 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662BE061FF155000024A899 /* Globals.swift */; };
+		2662BE091FF156E80024A899 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662BE081FF156E80024A899 /* Protocol.swift */; };
+		2662BE0B1FF157390024A899 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662BE0A1FF157390024A899 /* Reachability.swift */; };
 		33526C40B9DCAF3539981CC7 /* Pods_GeekalizedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C323421D0466EBC2564A7C6 /* Pods_GeekalizedTests.framework */; };
 		4931C215DC934F1B00D4D382 /* Pods_GeekalizedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB8A3BD94B86766E240F083 /* Pods_GeekalizedUITests.framework */; };
 		D22ED808C27D2D771FCDF5B3 /* Pods_Geekalized.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D671BA27ABB2E0FAD8BBAAC /* Pods_Geekalized.framework */; };
@@ -58,6 +62,10 @@
 		2662BDFC1FF057530024A899 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2662BDFE1FF0575C0024A899 /* iPhoneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneType.swift; sourceTree = "<group>"; };
 		2662BE001FF057620024A899 /* nextResponderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextResponderTextField.swift; sourceTree = "<group>"; };
+		2662BE031FF14F120024A899 /* ViewControllerFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFeed.swift; sourceTree = "<group>"; };
+		2662BE061FF155000024A899 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = Geekalized/Globals.swift; sourceTree = SOURCE_ROOT; };
+		2662BE081FF156E80024A899 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		2662BE0A1FF157390024A899 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2C323421D0466EBC2564A7C6 /* Pods_GeekalizedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekalizedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67957528E0C8109AFF1FC989 /* Pods-GeekalizedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekalizedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeekalizedUITests/Pods-GeekalizedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D671BA27ABB2E0FAD8BBAAC /* Pods_Geekalized.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geekalized.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,9 +131,12 @@
 			isa = PBXGroup;
 			children = (
 				2662BDCB1FF0546A0024A899 /* AppDelegate.swift */,
-				2662BDCD1FF0546A0024A899 /* ViewController.swift */,
+				2662BE081FF156E80024A899 /* Protocol.swift */,
+				2662BE0A1FF157390024A899 /* Reachability.swift */,
+				2662BE051FF14F1E0024A899 /* Viewcontroller */,
 				2662BE021FF057690024A899 /* Extensions */,
 				2662BDCF1FF0546A0024A899 /* Main.storyboard */,
+				2662BE061FF155000024A899 /* Globals.swift */,
 				2662BDD51FF0546A0024A899 /* Assets.xcassets */,
 				2662BDD71FF0546A0024A899 /* LaunchScreen.storyboard */,
 				2662BDDA1FF0546A0024A899 /* Info.plist */,
@@ -160,6 +171,15 @@
 				2662BDFE1FF0575C0024A899 /* iPhoneType.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2662BE051FF14F1E0024A899 /* Viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				2662BDCD1FF0546A0024A899 /* ViewController.swift */,
+				2662BE031FF14F120024A899 /* ViewControllerFeed.swift */,
+			);
+			path = Viewcontroller;
 			sourceTree = "<group>";
 		};
 		9FF06513BF148AC2ED2E1638 /* Pods */ = {
@@ -468,9 +488,13 @@
 			files = (
 				2662BDD41FF0546A0024A899 /* Geekalized.xcdatamodeld in Sources */,
 				2662BDFF1FF0575C0024A899 /* iPhoneType.swift in Sources */,
+				2662BE041FF14F120024A899 /* ViewControllerFeed.swift in Sources */,
 				2662BDCE1FF0546A0024A899 /* ViewController.swift in Sources */,
+				2662BE071FF155000024A899 /* Globals.swift in Sources */,
+				2662BE091FF156E80024A899 /* Protocol.swift in Sources */,
 				2662BDCC1FF0546A0024A899 /* AppDelegate.swift in Sources */,
 				2662BDFD1FF057530024A899 /* Extensions.swift in Sources */,
+				2662BE0B1FF157390024A899 /* Reachability.swift in Sources */,
 				2662BE011FF057620024A899 /* nextResponderTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
