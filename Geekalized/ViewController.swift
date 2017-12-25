@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import Foundation
+import Firebase
 
 class ViewController: UIViewController {
+    
+    var iPhoneType = iPhoneTypeSize()
+    var isLoggedIn:Bool = false
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        print(" ***** Begin Frist Controller Data ***** ")
+        print("VIEW : View Did Load")
+        print(iPhoneType.iphoneType())
+        print("User Logged In = \(isLoggedIn)")
+        print(" ***** End Frist Controller Data ***** ")
+
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
