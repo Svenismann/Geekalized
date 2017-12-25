@@ -1,0 +1,6 @@
+framework module Pods_GeekalizedUITests {
+  umbrella header "Pods-GeekalizedUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
